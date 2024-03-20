@@ -1,13 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectIsLoading } from "store/appState/selectors";
 import Layout from "components/Layout";
 import FavoritesPage from "pages/FavoritesPage";
 import WelcomePage from "pages/WelcomePage";
 import NanniesPage from "pages/NanniesPage";
-
-const { Routes, Route } = require("react-router-dom");
+import Loader from "components/Loader";
 
 const App = () => {
+  const openLoader = useSelector(selectIsLoading);
+
   return (
     <>
+      {openLoader && <Loader />}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<WelcomePage />} />

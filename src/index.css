@@ -8,6 +8,7 @@
   --bg-backdrop: #0b0b0b;
   --bg-footer: rgba(87, 88, 103, 1);
   --gradient-hero: #121417;
+  --bg-back-modal: rgba(11, 11, 11, 0.6);
 
   /* text */
   --color-text-black: #11101c;
@@ -25,21 +26,30 @@
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Helvetica Neue";
   font-weight: 400;
-  src: local("Roboto"), url("./fonts/Roboto-Regular.ttf") format("truetype");
+  src: local("Inter"),
+    url("./fonts/regular/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("./fonts/regular/HelveticaNeueCyr-Roman.woff") format("woff"),
+    url("./fonts/regular/HelveticaNeueCyr-Roman.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Helvetica Neue";
   font-weight: 500;
-  src: local("Roboto"), url("./fonts/Roboto-Medium.ttf") format("truetype");
+  src: local("Inter"),
+    url("./fonts/medium/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+    url("./fonts/medium/HelveticaNeueCyr-Medium.woff") format("woff"),
+    url("./fonts/medium/HelveticaNeueCyr-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "Helvetica Neue";
   font-weight: 700;
-  src: local("Roboto"), url("./fonts/Roboto-Bold.ttf") format("truetype");
+  src: local("Inter"),
+    url("./fonts/bold/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("./fonts/bold/HelveticaNeueCyr-Bold.woff") format("woff"),
+    url("./fonts/bold/HelveticaNeueCyr-Bold.ttf") format("truetype");
 }
 
 *,

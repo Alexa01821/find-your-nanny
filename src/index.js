@@ -7,12 +7,13 @@ import { PersistGate } from "redux-persist/integration/react";
 import App from "./components/App";
 import { Provider } from "react-redux";
 import { persistor, store } from "store/store";
+import Loader from "components/Loader";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="nanny-services">
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+        <PersistGate loading={<Loader />} persistor={persistor}>
           <App />
         </PersistGate>
       </Provider>
