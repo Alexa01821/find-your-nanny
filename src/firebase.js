@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getDatabase, ref } from "firebase/database";
+
 // https://firebase.google.com/docs/web/setup#available-libraries
 // const API_KEY = import.meta.env.VITE_API_KEY;
 const API_KEY = "AIzaSyD0bvwTAoLigKfLXkHI7Jv - NbvVzotl4lY";
@@ -15,4 +17,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
+const auth = getAuth(app);
+const database = getDatabase(app);
+const dbRef = ref(getDatabase());
+
+export { auth, database, dbRef };

@@ -1,38 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialState } from "./initialState";
-import {
-  fetchCurrentUser,
-  logOutUser,
-  loginUser,
-  registerUser,
-} from "./operations";
-import {
-  handleFetchCurrentUserFulfilled,
-  handleFetchCurrentUserPending,
-  handleLogOutFulfilled,
-  handleLogOutPending,
-  handleLoginFulfilled,
-  handleRegisterUserFulfilled,
-} from "./helpers";
+import reducer from "./reducer";
 
 export const authSlice = createSlice({
   name: "auth",
   initialState,
-  extraReducers: (builder) => {
-    builder
-      .addCase(registerUser.fulfilled, handleRegisterUserFulfilled)
-      .addCase(loginUser.fulfilled, handleLoginFulfilled)
-      .addCase(logOutUser.pending, handleLogOutPending)
-      .addCase(logOutUser.fulfilled, handleLogOutFulfilled)
-      .addCase(fetchCurrentUser.pending, handleFetchCurrentUserPending)
-      .addCase(fetchCurrentUser.fulfilled, handleFetchCurrentUserFulfilled)
-      .addMatcher(
-        (action) => action.type.endsWith("/rejected"),
-        (state) => {
-          state.isRefreshing = false;
-        }
-      );
-  },
+  reducers: reducer,
 });
 
+export const { getUser, logOut, refreshUser } = authSlice.actions;
 export const authReducer = authSlice.reducer;

@@ -2,5 +2,5 @@
   "compilerOptions": {
     "baseUrl": "src"
   },
-  "include": ["src", "src/api/index.js", "api"]
+  "include": ["src", "src/api/firebase.js", "api"]
 }

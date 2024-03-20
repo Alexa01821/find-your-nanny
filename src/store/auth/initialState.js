@@ -1,9 +1,10 @@
 export const initialState = {
   user: {
-    name: '',
-    email: ''
+    id: "",
+    name: "",
+    email: "",
   },
-  token: '',
+  token: "",
   isLoggedIn: false,
   isRefreshing: true,
 };
