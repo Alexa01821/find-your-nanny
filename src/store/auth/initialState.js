@@ -1,10 +1,10 @@
 export const initialState = {
   user: {
     id: "",
-    name: "",
+    name: "baby",
     email: "",
   },
   token: "",
-  isLoggedIn: false,
+  isLoggedIn: true,
   isRefreshing: true,
 };

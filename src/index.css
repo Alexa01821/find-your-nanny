@@ -69,7 +69,7 @@
 body {
   height: 100%;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-body);
@@ -116,15 +116,21 @@ a {
 }
 
 .btn {
-  color: var(--color-text-white);
-  background: var(--color-accent);
+  cursor: pointer;
+  border: none;
   border-radius: 30px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  border: none;
+  background: var(--color-accent);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--color-text-white);
 
   &:hover,
   &:focus {
-    color: var(--color-accent);
-    background: var(--color-text-white);
+    color: var(--bg-accent);
+    background-color: var(--color-text-white);
   }
 }
