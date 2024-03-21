@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { WrapNavStyled, AuthListStyled } from "./AuthNavStyled";
 
-const AuthNavList = ({ currentStyle }) => {
+const AuthNavList = ({ currentPage }) => {
   return (
     <>
-      {currentStyle === "/" ? (
-        <WrapNavStyled current={currentStyle}>
+      {currentPage ? (
+        <WrapNavStyled>
           <ul className="nav-list">
             <li className="nav-item">
               <NavLink aria-label="Welcome page" to="/">
@@ -19,7 +19,7 @@ const AuthNavList = ({ currentStyle }) => {
             </li>
           </ul>
 
-          <AuthListStyled current={currentStyle}>
+          <AuthListStyled>
             <li className="auth-item log">Log In</li>
             <li className="auth-item reg">Registration</li>
           </AuthListStyled>
@@ -39,7 +39,7 @@ const AuthNavList = ({ currentStyle }) => {
             </li>
           </ul>
 
-          <AuthListStyled current={currentStyle}>
+          <AuthListStyled>
             <li className="auth-item log">Log In</li>
             <li className="auth-item reg">Registration</li>
           </AuthListStyled>

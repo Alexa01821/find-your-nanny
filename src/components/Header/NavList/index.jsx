@@ -5,11 +5,11 @@ import { selectUser } from "store/auth/selector";
 import { WrapNavStyled } from "../AuthNavList/AuthNavStyled";
 import UserInformStyled from "./UserInformStyled";
 
-const NavList = ({ currentStyle }) => {
+const NavList = ({ currentPage }) => {
   const { name } = useSelector(selectUser);
   return (
     <>
-      {currentStyle === "/" ? (
+      {currentPage ? (
         <>
           <WrapNavStyled>
             <ul className="nav-list">

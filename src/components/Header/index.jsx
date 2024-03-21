@@ -7,21 +7,22 @@ import AuthNavList from "./AuthNavList";
 
 const Header = () => {
   const location = useLocation();
-  const currentStyled = location.pathname === "/" ? "/" : "other";
+  const currentPage = location.pathname === "/" ? "true" : "";
+  console.log(currentPage);
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <HeaderStyled current={currentStyled}>
+    <HeaderStyled current={currentPage}>
       <nav className="header-container">
         <NavLink aria-label="Welcome page" to="/" className="logo">
           Nanny.Services
         </NavLink>
 
         {!isLoggedIn ? (
-          <AuthNavList currentStyle={currentStyled} />
+          <AuthNavList currentPage={currentPage} />
         ) : (
-          <NavList currentStyle={currentStyled} />
+          <NavList currentPage={currentPage} />
         )}
       </nav>
     </HeaderStyled>

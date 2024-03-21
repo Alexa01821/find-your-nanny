@@ -31,12 +31,12 @@ export const AuthListStyled = styled.ul`
     padding: 14px 39px;
     border: 1px solid rgba(251, 251, 251, 0.4);
     background-color: ${(props) =>
-      props.current === "/" ? "transparent" : "var(--bg-accent)"};
+      props.current ? "transparent" : "var(--bg-accent)"};
   }
   .reg {
     padding: 14px 40px;
     border: ${(props) =>
-      props.current === "/" ? "none" : "1px solid rgba(251, 251, 251, 0.4)"};
+      props.current ? "none" : "1px solid rgba(251, 251, 251, 0.4)"};
     background-color: var(--bg-accent);
   }
 `;

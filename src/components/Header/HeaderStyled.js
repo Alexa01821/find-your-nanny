@@ -6,7 +6,7 @@ const HeaderStyled = styled.header`
   right: 0;
   z-index: 12;
   background-color: ${(props) =>
-    props.current === "/" ? "transparent" : "var(--bg-accent)"};
+    props.current ? "transparent" : "var(--bg-accent)"};
 
   .header-container {
     display: flex;
@@ -23,7 +23,6 @@ const HeaderStyled = styled.header`
       line-height: 117%;
       letter-spacing: -0.02em;
       color: var(--color-text-white);
-      /* margin-right: auto; */
     }
 
     .nav-list {
