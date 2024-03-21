@@ -11,7 +11,7 @@ import Loader from "components/Loader";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="nanny-services">
+    <BrowserRouter basename="find-your-nanny">
       <Provider store={store}>
         <PersistGate loading={<Loader />} persistor={persistor}>
           <App />
