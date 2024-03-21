@@ -2,7 +2,7 @@
   "name": "find-your-nanny",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alexa01821.github.io/find-your-nanny/",
+  "homepage": "https://alexa01821.github.io/nanny-services/",
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.2",
     "@emotion/react": "^11.11.4",
