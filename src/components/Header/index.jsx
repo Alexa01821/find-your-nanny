@@ -7,7 +7,7 @@ import AuthNavList from "./AuthNavList";
 
 const Header = () => {
   const location = useLocation();
-  const currentStyled = location.pathname === "/" ? true : false;
+  const currentStyled = location.pathname === "/" ? "/" : "other";
 
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
